@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  --Blue: hsl(248, 32%, 49%);
+
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(./images/bg-intro-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+
+
+.container {
+  min-height: 100vh;
+  padding: 4em;
+  display: flex;
+  gap: 2em;
+  margin: 4em;
+}
+.container .container_content {
+  align-self: center;
+  text-align: left;
+  padding: 3em;
+  width: 50%;
+  line-height: 2.2em;
+}
+
+.container .container_content h1
+ {font-weight: 700;
+  color: white;
+  
+}
+.container .container_content p{
+    color: white;
+    margin-top: 2em;
+}
+
+
+.container .container_form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+/*h1{
+    width: 70%; I am not sure if this setting is needed to make it look exactly like the oringinal one?
+}*/
+
+.container .container_form .form_banner{
+    text-align: center;
+    background-color: var(--Blue);
+    border-radius: 10px;
+    box-shadow: 0 8px 15px -3px hsl(249, 5%, 28%);
+    padding:1em 4em;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 2em;
+}
+
+.container_form #myForm{
+  display: flex;
+  flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2em 2em 4em 2em;
+    box-shadow: 0 8px 15px -3px hsl(252, 4%, 26%);
+    width: 100%;
+}
+.input_groups{
+  position: relative;
+}
+.input_groups label{
+  display:none;
+}
+
+.input_groups input{
+  display: inline;
+  width: 100%;
+  padding:1em;
+  
+ border-radius: 5px;
+ margin: 0.5em ;
+ 
+}
+.input_groups input:focus{
+  border: 1px solid var(--Dark-Blue);
+}
+.input_groups input::placeholder{
+  font-weight: 600;
+}
+.input_groups .errorImg{
+  position:absolute;
+ top:0.8em;
+ right:1em;
+ width: 1.5em;
+ visibility: hidden;
+}
+.input_groups .errorText{
+  display: block;
+ margin: 0.5em;
+ text-align: right;
+ 
+ color: var(--Red);
+ font-style: italic;
+ font-weight: 600;
+ visibility: hidden;
+}
+
+.input_groups .error img{
+  visibility:visible ;
+}
+.input_groups .error small{
+  visibility: visible;
+}
+.input_groups .error input{
+  border:1px solid var(--Red);
+  color:red;
+}
+
+#myForm button{
+  margin:1em;
+  padding: 1.2em 2em;
+  color: #ffff;
+  background-color: var(--Green);
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+
+}
+
+#myForm button:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+#myForm button:active{
+  transform: scale(0.98);
+  
+}
+#myForm .terms{
+  text-align: center;
+  color:var(--Grayish-Blue);
+  font-size:0.8em;
+}
+.terms span{
+  color: var(--Red);
+  font-weight: 600;
+}
+
+
+
+@media only screen and (max-width:900px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .container .container_content{
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width:375px){
+  body{
+    background-color: hsl(0, 100%, 74%);
+  background-image: url(./images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  .container{
+    padding:4em 0;
+    margin:2em;
+  }
+  .container .container_content{
+    padding:0;
+    width: 100%;
+   
+  }
+  .container .container_content p{
+    line-height:1.5em;
+    margin: 2em 0;
+}
+ button{
+  width: 100%;
+  margin:1em 0
+}
+.form_banner span{
+  font-weight: 200;
+}       
+}                                                                                                                                                                                                                                                                                                                                                                                                                      
